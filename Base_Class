@@ -63,4 +63,74 @@ public class BaseClass {
             e.printStackTrace();
         }
     }
+
+public static void waitimplecit() {
+		 
+
+		 driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	}
+		public static void close() {
+			driver.close();
+		}
+
+		public static void quit() {
+			driver.quit();
+		}
+
+		
+		public static void navigateTo(String S) {
+			driver.navigate().to(S);
+		}
+
+		public static void navigateback() {
+			driver.navigate().back();
+		}
+
+		public static void navigatefrwd() {
+			driver.navigate().forward();
+		}
+
+		public static void navigateRefr() {
+			driver.navigate().refresh();
+		}
+
+		public static void getUrl(String a) {
+			driver.get(a);
+		}
+
+		public static void Maximize() {
+			driver.manage().window().maximize();
+		}
+
+		public static void Alertaccept() {
+			driver.switchTo().alert().accept();
+		}
+
+		public static void AlertDismis() {
+			driver.switchTo().alert().dismiss();
+		}
+
+		public static void AlertSendkey(String S) {
+			driver.switchTo().alert().sendKeys(S);
+		}
+	    
+		public static void ClicktheElement(WebElement sr1){
+			sr1.click();
+	}
+		
+		public void modifyField(WebElement element, String value) {
+	        element.clear();
+	        element.sendKeys(value);
+	        System.out.println("✅ Field modified with value: " + value);
+	    }
+		
+		public static void actionscontet() {
+			Actions act = new Actions(driver);
+			act.contextClick();
+		}
+		
+		public void clearField(WebElement element) {
+		    element.sendKeys(Keys.CONTROL + "a"); // select all text
+		    element.sendKeys(Keys.DELETE);        // delete
+		}
 }
