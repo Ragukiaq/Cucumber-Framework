@@ -1,0 +1,31 @@
+package Test_Runner;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+
+import com.Base_Class.Base_Class;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@CucumberOptions(features = "C:\\Users\\ragum\\eclipse-workspace\\Admin_Panel\\src\\test\\java\\com\\Featurefile\\feature.feature",glue = "com.Step_Definition",plugin = {"pretty", "html:target/html/repot.html"})
+@RunWith(Cucumber.class)
+
+public class Test_Runner extends Base_Class {
+	
+	@BeforeClass
+	public static void Startup() {
+		driver= Base_Class.Browser_lauch();
+		maximize();	
+		
+	}
+	
+	@AfterClass
+	public static void end() {
+		//driver.close();
+	}
+
+}
+
+
