@@ -1,0 +1,16 @@
+Feature: Verify the functionality of the admin panel.
+
+Scenario Outline: Verify the functionality of the login page on the admin panel
+	Given that the Admin launches the application
+	When the Admin enters a valid "<Email>" in the email field
+	And the Admin enters a valid "<Password>" in the password field
+	Then the Admin clicks the login button and navigates to the dashboard page "<expected_results>"
+	
+#	Examples:
+#		|Email|Password|expected_results|
+#		|admin@gmail.com|Admin@123|sucess|
+#		|admingmail.com|Admin123|Fail|
+#		|     |Admin@123|Fail|
+#		|admin@gmail.com|    |Fail|
+#		| |  |Fail|
+#		|admin@gmail.com|Admin@123| sucess|
