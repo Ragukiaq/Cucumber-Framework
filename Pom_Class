@@ -1,0 +1,27 @@
+package com.Pom_Class;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class Pom_Class {
+	WebDriver driver;
+
+	public Pom_Class(WebDriver driver1) {
+		
+		this.driver = driver1;
+		PageFactory.initElements(driver1, this);	
+
+	}
+	
+	///login
+	
+		@FindBy(xpath = "//*[@name=\"email\"]")
+		WebElement emailid;
+		public WebDriver getDriver() {
+			return driver;
+		}
+		public void setDriver(WebDriver driver) {
+			this.driver = driver;
+		}
