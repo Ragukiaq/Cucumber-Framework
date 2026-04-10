@@ -1,0 +1,29 @@
+package Helper_Package;
+
+import java.io.IOException;
+
+public class File_reader {
+	
+	public File_reader() {
+	}
+	
+	
+	public static File_reader getInstance() {
+		
+		File_reader fr = new File_reader();
+		return fr;
+		
+	} 
+	
+	public Configiration_reder getInstanceAR() throws IOException {
+		
+		Configiration_reder cr = new Configiration_reder();
+		
+		return cr;
+		
+	}
+	
+	
+	
+
+}
